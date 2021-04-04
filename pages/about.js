@@ -13,7 +13,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <Headline title="About page" page="about"/>
+        <Headline  page="about"/>
         <Links />
       </main>
       <Footer />

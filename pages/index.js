@@ -12,7 +12,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <Headline title= "index page" page="index"/>
+        <Headline  page="index"/>
         <Links />
       </main>
       <Footer />
