@@ -1,8 +1,8 @@
 import Head from 'next/head'
-import styles from 'src/components/styles/Home.module.css'
-import {Footer} from 'src/components/components/Footer'
-import { Main } from 'src/components/components/Main'
-import { Header } from 'src/components/components/Header'
+import styles from 'src/styles/Home.module.css'
+import { Main } from 'src/components/Main'
+import { Header } from 'src/components/Header'
+import { Footer } from 'src/components/Footer'
 export default function Home() {
   return (
     <div className={styles.container}>
