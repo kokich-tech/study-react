@@ -6,9 +6,9 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Component {...pageProps} />
     </div>
   );
-  <Component {...pageProps} />
 }
 
 export default MyApp
