@@ -3,7 +3,7 @@ import styles from 'src/styles/Home.module.css'
 import { Main } from 'src/components/Main'
 import { Header } from 'src/components/Header'
 import { Footer } from 'src/components/Footer'
-import { useCallback } from 'react'
+import { useCallback, useEffect } from 'react'
 
 
 
@@ -14,6 +14,15 @@ export default function Home() {
     console.log(e.target.href);
     e.preventDefault();
     alert(foo);
+  },[]);
+
+  useEffect(() => {
+    document.body.style.backgroundColor = "lightblue";
+
+    return () => {
+      document.body.style.backgroundColor = "";
+
+    }
   },[]);
 
   return (
