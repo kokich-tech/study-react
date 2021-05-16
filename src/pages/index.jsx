@@ -3,18 +3,20 @@ import styles from 'src/styles/Home.module.css'
 import { Main } from 'src/components/Main'
 import { Header } from 'src/components/Header'
 import { Footer } from 'src/components/Footer'
-import { useCallback, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 
 
 export default function Home() {
-  const foo = 1;
+  const [count, setCount] = useState(1);
+  // (1)はfooに反映されている
   
-  const handleClick = useCallback((e) =>  {
-    console.log(e.target.href);
-    e.preventDefault();
-    alert(foo);
-  },[]);
+  const handleClick  = (e) =>  {
+    setCount((count) => count + 1);
+    setCount((count) => count + 1);
+    
+    
+  };
 
   useEffect(() => {
     document.body.style.backgroundColor = "lightblue";
@@ -25,15 +27,18 @@ export default function Home() {
     }
   },[]);
 
+  
+
   return (
     <div className={styles.container}>
       <Head>
         <title>Index Page</title>
       </Head>
       <Header />
-      <a href="/about" onClick={handleClick}>
+      <h1>{count}</h1>
+      <button onClick={handleClick}>
         ボタン
-      </a>
+      </button>
       <Main page="index" />
       <Footer />
     </div>
